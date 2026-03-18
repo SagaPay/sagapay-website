@@ -285,9 +285,9 @@ h4 {
 }
 
 .logo-img {
-    height: 40px;
+    height: 32px;
     width: auto;
-    max-width: 150px;
+    max-width: 120px;
     object-fit: contain;
 }
 
@@ -384,7 +384,7 @@ h4 {
 .hero-bg-image {
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80') center/cover no-repeat;
+    background: url('https://cdn.builder.io/api/v1/image/assets%2F510c8bce0c734346901b54b213eb0f66%2F0d45d7ea257a46c5bc8099e3390d59f4?format=webp&width=1600') center/cover no-repeat;
     z-index: 0;
 }
 
@@ -565,7 +565,7 @@ h4 {
 .section-subtitle {
     font-size: 1.1rem;
     color: var(--gray-500);
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
 }
@@ -573,7 +573,7 @@ h4 {
 /* --- Benefits --- */
 .benefits {
     padding: var(--spacing-5xl) 0;
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
 }
 
 .benefits-top {
@@ -618,8 +618,8 @@ h4 {
 }
 
 .benefit-card {
-    background: var(--gray-50);
-    border: 1px solid var(--gray-100);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
+    border: 1px solid var(--blue-100);
     border-radius: var(--radius-lg);
     padding: 40px 28px;
     text-align: center;
@@ -627,10 +627,10 @@ h4 {
 }
 
 .benefit-card:hover {
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-100) 100%);
     border-color: var(--blue-400);
-    box-shadow: 0 16px 48px rgba(11, 61, 145, 0.12);
-    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(11, 61, 145, 0.15);
+    transform: translateY(-8px);
 }
 
 .benefit-icon {
@@ -667,11 +667,11 @@ h4 {
 
 .product-card {
     background: var(--white);
-    border: 1px solid var(--gray-200);
+    border: 2px solid var(--blue-100);
     border-radius: var(--radius-lg);
     padding: 0 0 36px;
     text-align: center;
-    transition: var(--transition);
+    transition: all var(--transition);
     overflow: hidden;
 }
 
@@ -682,9 +682,9 @@ h4 {
 }
 
 .product-card:hover {
-    box-shadow: 0 20px 60px rgba(11, 61, 145, 0.15);
-    transform: translateY(-8px);
-    border-color: transparent;
+    box-shadow: 0 24px 72px rgba(11, 61, 145, 0.18);
+    transform: translateY(-10px);
+    border-color: var(--blue-400);
 }
 
 .product-card.featured {
@@ -796,7 +796,7 @@ h4 {
 /* --- Features --- */
 .features {
     padding: var(--spacing-5xl) 0;
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
 }
 
 .features-grid {
@@ -806,18 +806,18 @@ h4 {
 }
 
 .feature-card {
-    background: var(--gray-50);
-    border: 1px solid var(--gray-100);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
+    border: 1px solid var(--blue-100);
     border-radius: var(--radius-lg);
     padding: 36px 28px;
     transition: all var(--transition);
 }
 
 .feature-card:hover {
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-100) 100%);
     border-color: var(--blue-400);
-    box-shadow: 0 12px 40px rgba(11, 61, 145, 0.1);
-    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(11, 61, 145, 0.12);
+    transform: translateY(-6px);
 }
 
 .feature-icon-wrapper {
@@ -897,28 +897,13 @@ h4 {
 
 /* --- Step Images --- */
 .step-img-wrapper {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    margin-bottom: 24px;
-    box-shadow: var(--shadow-md);
-}
-
-.step-img-wrapper img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    transition: transform var(--transition-slow);
-}
-
-.step-card:hover .step-img-wrapper img {
-    transform: scale(1.07);
+    display: none;
 }
 
 /* --- Industries / Marquee --- */
 .industries {
     padding: var(--spacing-5xl) 0 var(--spacing-4xl);
-    background: var(--white);
+    background: linear-gradient(135deg, var(--blue-50) 0%, var(--white) 100%);
     overflow: hidden;
 }
 
@@ -965,15 +950,16 @@ h4 {
 /* --- Dashboard Preview --- */
 .dashboard-preview {
     padding: var(--spacing-5xl) 0;
-    background: linear-gradient(135deg, var(--blue-50) 0%, var(--gray-50) 100%);
+    background: linear-gradient(135deg, var(--blue-100) 0%, var(--blue-50) 50%, var(--gray-50) 100%);
 }
 
 .dashboard-image-wrapper {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: visible;
-    box-shadow: 0 24px 80px rgba(11, 61, 145, 0.15);
-    border: 1px solid var(--gray-200);
+    box-shadow: 0 32px 96px rgba(11, 61, 145, 0.2);
+    border: 2px solid rgba(11, 61, 145, 0.1);
+    margin-top: var(--spacing-lg);
 }
 
 .dashboard-img {
@@ -1040,7 +1026,7 @@ h4 {
 /* --- Image Showcase --- */
 .showcase {
     padding: var(--spacing-5xl) 0;
-    background: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--blue-50) 100%);
 }
 
 .showcase-grid {
