@@ -384,7 +384,7 @@ h4 {
 .hero-bg-image {
     position: absolute;
     inset: 0;
-    background: url('https://cdn.builder.io/api/v1/image/assets%2F510c8bce0c734346901b54b213eb0f66%2F0d45d7ea257a46c5bc8099e3390d59f4?format=webp&width=1600') center/cover no-repeat;
+    background: url('https://cdn.builder.io/api/v1/image/assets%2F510c8bce0c734346901b54b213eb0f66%2Fc1bdfcdab62447289655fa6ef29f026e?format=webp&width=1600') center/cover no-repeat;
     z-index: 0;
 }
 
