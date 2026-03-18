@@ -13,16 +13,11 @@
 <body>
 
     <!-- Navigation -->
+    <header>
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="#" class="logo">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="32" height="32" rx="8" fill="#0B3D91"/>
-                    <path d="M8 16.5C8 12.9 10.2 10 14 10C16.2 10 17.8 11.2 18.5 12.8L16.2 14C15.8 13.2 15 12.6 14 12.6C12.2 12.6 11 14.2 11 16.5C11 18.8 12.2 20.4 14 20.4C15 20.4 15.8 19.8 16.2 19L18.5 20.2C17.8 21.8 16.2 23 14 23C10.2 23 8 20.1 8 16.5Z" fill="white"/>
-                    <rect x="19" y="10" width="3" height="13" rx="1.5" fill="white"/>
-                    <circle cx="24" cy="12" r="2" fill="#4DA3FF"/>
-                </svg>
-                <span>Sagapay</span>
+                <span class="logo-mark">SAGA.</span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#produkter">Produkter</a>
@@ -41,29 +36,33 @@
             </button>
         </div>
     </nav>
+    </header>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-bg-image"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">Norges smarteste betalingsplattform</div>
                 <h1>TA BETALT.<br>ENKELT.</h1>
                 <p class="hero-subtitle">Én plattform for nettbutikk, fysisk butikk og alt imellom. Ingen bindingstid. Ingen skjulte gebyrer. Bare betaling som fungerer.</p>
                 <div class="hero-ctas">
-                    <a href="#kontakt" class="btn btn-primary btn-lg">Kom i gang gratis</a>
-                    <a href="#kontakt" class="btn btn-outline btn-lg">Kontakt oss</a>
+                    <a href="#kontakt" class="btn btn-white btn-lg">Kom i gang gratis</a>
+                    <a href="#kontakt" class="btn btn-outline-white btn-lg">Kontakt oss</a>
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#0B3D91"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span>Ingen månedsavgift</span>
                     </div>
                     <div class="trust-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#0B3D91"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span>Klar på 10 minutter</span>
                     </div>
                     <div class="trust-item">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#0B3D91"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="rgba(255,255,255,0.2)"/><path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <span>Lavest pris-garanti</span>
                     </div>
                 </div>
@@ -97,12 +96,48 @@
         </div>
     </section>
 
+    <!-- Dashboard Preview Section -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>SE ALT I ÉN<br>OVERSIKT</h2>
+                <p class="section-subtitle">Et kraftig dashboard som gir deg full kontroll over salg, transaksjoner og kunder i sanntid.</p>
+            </div>
+            <div class="dashboard-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Saga POS kassesystem dashboard" class="dashboard-img" loading="lazy">
+                <div class="dashboard-float-card float-left">
+                    <div class="float-card-icon green-bg">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14l4-4 3 3 7-8" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="float-card-label">Omsetning i dag</div>
+                        <div class="float-card-value">kr 48 291</div>
+                    </div>
+                </div>
+                <div class="dashboard-float-card float-right">
+                    <div class="float-card-icon blue-bg">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M6 6l4-4 4 4" stroke="#4DA3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="float-card-label">+23% denne uken</div>
+                        <div class="float-card-value">142 transaksjoner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Benefits Section -->
     <section class="benefits" id="fordeler">
         <div class="container">
-            <div class="section-header">
-                <h2>BYGGET FOR BEDRIFTER<br>SOM TENKER FREMOVER</h2>
-                <p class="section-subtitle">Alt du trenger for å ta betalt – uten alt du ikke trenger.</p>
+            <div class="benefits-top">
+                <div class="section-header left-align">
+                    <h2>BYGGET FOR BEDRIFTER<br>SOM TENKER FREMOVER</h2>
+                    <p class="section-subtitle">Alt du trenger for å ta betalt – uten alt du ikke trenger.</p>
+                </div>
+                <div class="benefits-hero-img">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=700&q=80" alt="Saga Tap to Pay – kontaktløs betaling" loading="lazy">
+                </div>
             </div>
             <div class="benefits-grid">
                 <div class="benefit-card">
@@ -147,16 +182,7 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-visual">
-                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                            <rect x="20" y="15" width="80" height="90" rx="8" fill="#EBF3FF" stroke="#0B3D91" stroke-width="2"/>
-                            <rect x="30" y="30" width="60" height="40" rx="4" fill="white" stroke="#0B3D91" stroke-width="1.5"/>
-                            <rect x="36" y="36" width="20" height="4" rx="2" fill="#4DA3FF"/>
-                            <rect x="36" y="44" width="48" height="3" rx="1.5" fill="#E0E7EF"/>
-                            <rect x="36" y="51" width="36" height="3" rx="1.5" fill="#E0E7EF"/>
-                            <rect x="36" y="58" width="24" height="3" rx="1.5" fill="#E0E7EF"/>
-                            <rect x="30" y="78" width="60" height="14" rx="4" fill="#0B3D91"/>
-                            <text x="60" y="88" text-anchor="middle" fill="white" font-size="8" font-weight="600">Betal nå</text>
-                        </svg>
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Saga nettbetaling – sikker betaling" class="product-img" loading="lazy">
                     </div>
                     <h3>Nettbetaling</h3>
                     <p>Integrer med WooCommerce, Magento eller bruk vår API. Enkel og sikker betaling for nettbutikken din.</p>
@@ -164,17 +190,7 @@
                 </div>
                 <div class="product-card featured">
                     <div class="product-visual">
-                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                            <rect x="25" y="10" width="70" height="85" rx="6" fill="#0B3D91"/>
-                            <rect x="30" y="15" width="60" height="50" rx="4" fill="white"/>
-                            <rect x="36" y="22" width="22" height="10" rx="3" fill="#E8F4E8"/>
-                            <rect x="62" y="22" width="22" height="10" rx="3" fill="#FDE8F0"/>
-                            <rect x="36" y="36" width="22" height="10" rx="3" fill="#FFF3E0"/>
-                            <rect x="62" y="36" width="22" height="10" rx="3" fill="#EBF3FF"/>
-                            <rect x="30" y="70" width="60" height="12" rx="4" fill="#4DA3FF"/>
-                            <text x="60" y="79" text-anchor="middle" fill="white" font-size="7" font-weight="600">Betal kr 98,00</text>
-                            <rect x="40" y="98" width="40" height="4" rx="2" fill="#C0C0C0"/>
-                        </svg>
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Saga POS kassesystem" class="product-img" loading="lazy">
                     </div>
                     <h3>POS-system</h3>
                     <p>Fullt kassesystem for fysisk butikk. Håndter bordbestilling, varelager og betaling – alt på ett sted.</p>
@@ -182,14 +198,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-visual">
-                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                            <rect x="30" y="10" width="60" height="100" rx="12" fill="#1a1a1a"/>
-                            <rect x="34" y="18" width="52" height="84" rx="8" fill="white"/>
-                            <circle cx="60" cy="60" r="18" fill="#EBF3FF" stroke="#0B3D91" stroke-width="2"/>
-                            <path d="M52 60h16M60 52v16" stroke="#0B3D91" stroke-width="2.5" stroke-linecap="round"/>
-                            <text x="60" y="88" text-anchor="middle" fill="#0B3D91" font-size="7" font-weight="600">Tap to Pay</text>
-                            <rect x="50" y="14" width="20" height="4" rx="2" fill="#333"/>
-                        </svg>
+                        <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=600&q=80" alt="Saga Tap to Pay med mobil" class="product-img" loading="lazy">
                     </div>
                     <h3>Tap to Pay</h3>
                     <p>Bruk iPhone eller Android som betalingsterminal. Ta betalt hvor som helst – ingen ekstra utstyr.</p>
@@ -290,6 +299,9 @@
             </div>
             <div class="steps-grid">
                 <div class="step-card">
+                    <div class="step-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80" alt="Rask registrering med Saga" loading="lazy">
+                    </div>
                     <div class="step-number">01</div>
                     <h3>REGISTRER DEG</h3>
                     <p>Opprett konto på 5 minutter. Alt du trenger er organisasjonsnummer og bankkonto.</p>
@@ -298,6 +310,9 @@
                     <svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="#0B3D91" stroke-width="2" stroke-dasharray="4,4"/></svg>
                 </div>
                 <div class="step-card">
+                    <div class="step-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" alt="Velg din Saga betalingsløsning" loading="lazy">
+                    </div>
                     <div class="step-number">02</div>
                     <h3>VELG LØSNING</h3>
                     <p>POS for butikk, Tap to Pay på mobilen, eller nettbetaling – velg det som passer din bedrift.</p>
@@ -306,9 +321,54 @@
                     <svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="#0B3D91" stroke-width="2" stroke-dasharray="4,4"/></svg>
                 </div>
                 <div class="step-card">
+                    <div class="step-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400&q=80" alt="Ta imot betaling med Saga" loading="lazy">
+                    </div>
                     <div class="step-number">03</div>
                     <h3>TA BETALT</h3>
                     <p>Begynn å ta imot betalinger umiddelbart. Utbetaling til din konto innen 48 timer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Showcase Section -->
+    <section class="showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>BETALING SOM<br>BARE FUNGERER</h2>
+                <p class="section-subtitle">Se hvordan Sagapay hjelper bedrifter i hele Norge.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-item large">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Saga POS kassesystem" loading="lazy">
+                    <div class="showcase-overlay">
+                        <span>Saga POS – Fullt kassesystem</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=500&q=80" alt="Kontaktløs mobilbetaling med Saga" loading="lazy">
+                    <div class="showcase-overlay">
+                        <span>Tap to Pay</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&q=80" alt="Saga nettbetaling checkout" loading="lazy">
+                    <div class="showcase-overlay">
+                        <span>Nettbetaling</span>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Saga betalingsterminal" loading="lazy">
+                    <div class="showcase-overlay">
+                        <span>Analyse & Innsikt</span>
+                    </div>
+                </div>
+                <div class="showcase-item large">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Betaling i butikk" loading="lazy">
+                    <div class="showcase-overlay">
+                        <span>Betaling i butikk</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -320,6 +380,32 @@
             <div class="section-header">
                 <h2>FOR ALLE TYPER<br>BEDRIFTER</h2>
                 <p class="section-subtitle">Fra kafeer til klesbutikker – Sagapay fungerer for alle.</p>
+            </div>
+            <div class="industry-images-grid">
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80" alt="Restaurant" loading="lazy">
+                    <div class="industry-label">Restauranter</div>
+                </div>
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Kafé" loading="lazy">
+                    <div class="industry-label">Kafeer</div>
+                </div>
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80" alt="Klesbutikk" loading="lazy">
+                    <div class="industry-label">Klesbutikker</div>
+                </div>
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80" alt="Frisør" loading="lazy">
+                    <div class="industry-label">Frisører</div>
+                </div>
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="Treningssenter" loading="lazy">
+                    <div class="industry-label">Treningssentre</div>
+                </div>
+                <div class="industry-img-card">
+                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&q=80" alt="Matbutikk" loading="lazy">
+                    <div class="industry-label">Matbutikker</div>
+                </div>
             </div>
         </div>
         <div class="marquee-wrapper">
@@ -362,6 +448,17 @@
         </div>
     </section>
 
+    <!-- Full-width Image Banner -->
+    <section class="image-banner">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80" alt="Saga i bruk" loading="lazy">
+        <div class="image-banner-overlay">
+            <div class="container">
+                <h2>OVER 500 BEDRIFTER<br>STOLER PÅ SAGAPAY</h2>
+                <p>Bli med i Norges raskest voksende betalingsplattform</p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="kontakt">
         <div class="container">
@@ -396,19 +493,15 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="32" height="32" rx="8" fill="#0B3D91"/>
-                            <path d="M8 16.5C8 12.9 10.2 10 14 10C16.2 10 17.8 11.2 18.5 12.8L16.2 14C15.8 13.2 15 12.6 14 12.6C12.2 12.6 11 14.2 11 16.5C11 18.8 12.2 20.4 14 20.4C15 20.4 15.8 19.8 16.2 19L18.5 20.2C17.8 21.8 16.2 23 14 23C10.2 23 8 20.1 8 16.5Z" fill="white"/>
-                            <rect x="19" y="10" width="3" height="13" rx="1.5" fill="white"/>
-                            <circle cx="24" cy="12" r="2" fill="#4DA3FF"/>
-                        </svg>
-                        <span>Sagapay</span>
+                        <span class="logo-mark">SAGA.</span>
                     </a>
                     <p class="footer-tagline">Moderne betalingsløsninger<br>for norske bedrifter.</p>
                     <p class="footer-contact-info">+47 22 00 00 00<br>hei@sagapay.no</p>

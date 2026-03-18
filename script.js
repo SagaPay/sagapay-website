@@ -61,7 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         '.hero-card',
         '.cta-text',
         '.cta-checklist',
-        '.checklist-item'
+        '.checklist-item',
+        '.dashboard-image-wrapper',
+        '.dashboard-float-card',
+        '.showcase-item',
+        '.industry-img-card',
+        '.benefits-hero-img',
+        '.image-banner-overlay'
     ];
 
     animatableSelectors.forEach(selector => {
