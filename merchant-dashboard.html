@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Dashboard | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#api">API</a>
+                <a href="priser.html">Priser</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Merchant Dashboard</h1>
+                <p>Full oversikt over salg, gavekort, rapporter og butikkdrift – alt samlet på ett sted.</p>
+            </div>
+            <div class="hero-visual">
+                <img src="images/dashboard.png" alt="Merchant Dashboard" style="max-width: 420px; width: 100%; border-radius: 18px; box-shadow: 0 8px 32px rgba(10,37,64,0.10);">
+            </div>
+        </div>
+    </header>
+        <section class="hero dashboard-hero-gradient fade-in">
+            <div class="hero-content">
+                <h1 class="dashboard-hero-title">Kraftig Merchant Dashboard</h1>
+                <p class="dashboard-hero-subtitle">Full kontroll over gavekort, transaksjoner og innsikt – alt på ett sted.<br>
+                Opplev et dashbord som gir deg superkrefter i hverdagen!</p>
+                <a href="#statistikk" class="cta-btn">Se statistikk</a>
+            </div>
+            <img src="images/dashboard.png" alt="Merchant Dashboard" class="dashboard-hero-img dashboard-hero-img-animated">
+        </section>
+
+        <!-- Animated Statistics Bar -->
+        <section id="statistikk" class="stats-bar fade-in">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-gift"></i></div>
+                <div class="stat-number" data-target="12000">0</div>
+                <div class="stat-label">Solgte gavekort</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-euro-sign"></i></div>
+                <div class="stat-number" data-target="3500000">0</div>
+                <div class="stat-label">Total omsetning</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">Kundetilfredshet (%)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Live rapporter</div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial-section fade-in">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">“Dashboardet gir oss full oversikt og sparer oss for masse tid. Vi elsker innsikten og hvor enkelt alt er!”</div>
+                <div class="testimonial-user">
+                    <img src="images/pos.png" alt="Bruker" class="testimonial-avatar">
+                    <div>
+                        <div class="testimonial-name">Kari Nordmann</div>
+                        <div class="testimonial-role">Butikksjef, Saga</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container features-grid" style="align-items: flex-start;">
+            <div class="feature-card">
+                <div class="icon-wrapper icon-bg-1"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Sanntidsrapportering</h3>
+                <p>Følg med på salg, gavekort og betalinger i sanntid – uansett hvor du er.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper icon-bg-2"><i class="fa-solid fa-gift"></i></div>
+                <h3>Gavekortadministrasjon</h3>
+                <p>Opprett, send og administrer digitale gavekort direkte fra dashboardet.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper icon-bg-3"><i class="fa-solid fa-store"></i></div>
+                <h3>Butikkstyring</h3>
+                <p>Administrer flere butikker, ansatte og lager – alt på ett sted.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-wrapper icon-bg-4"><i class="fa-solid fa-lock"></i></div>
+                <h3>Sikkerhet & tilgang</h3>
+                <p>Gi ansatte riktige roller og tilgangsnivåer. All data er trygt lagret i skyen.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>+47 22 00 00 00</p>
+                        <p>support@sagapay.no</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                        <li><a href="merchant-dashboard.html">Merchant Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

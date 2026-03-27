@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS-system og Gavekort | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="priser.html">Priser</a>
+                <a href="index.html#api">API</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pricing-hero">
+        <div class="container">
+            <h1>POS-system & Gavekort.</h1>
+            <p>Ta full kontroll over butikken(e) dine med vår kasseløsning. Integrert maskinvare og egne gavekortløsninger satt opp ut av boksen.</p>
+        </div>
+    </header>
+
+    <!-- POS-system seksjon med bilde -->
+    <section class="features" style="padding-bottom: 40px;">
+        <div class="container features-grid fade-in-section" style="align-items: center;">
+            <div style="min-width: 320px;">
+                <h2>Komplett POS-system</h2>
+                <ul style="margin-bottom: 24px; color: #425466; font-size: 1.1rem;">
+                    <li>Alt-i-ett kasseløsning med maskinvare og programvare</li>
+                    <li>Full synkronisering mot nettbutikk og lager</li>
+                    <li>Enkel integrasjon med betaling, rapportering og gavekort</li>
+                </ul>
+                <p style="color: #64748b; margin-bottom: 18px;">Saga POS gir deg full kontroll over salg, lager og rapportering – uansett om du har én eller flere butikker.</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="images/pos.png" alt="POS-system maskinvare" class="feature-img-animate" style="max-width: 350px; width: 100%; border-radius: 18px; margin-bottom: 18px;">
+                <img src="images/dashboard.png" alt="POS dashboard" class="feature-img-dashboard" style="max-width: 350px; width: 100%; border-radius: 18px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Digitale gavekort seksjon -->
+    <section class="features" style="background: #f8fafc; padding-top: 40px; padding-bottom: 60px;">
+        <div class="container features-grid fade-in-section" style="align-items: center;">
+            <div style="text-align: center;">
+                <img src="images/gavekort.png" alt="Digitale gavekort" class="feature-img-animate" style="max-width: 320px; width: 100%; border-radius: 18px;">
+            </div>
+            <div style="min-width: 320px;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <span class="bonus-badge-animate">BONUS</span>
+                    <span style="color: #0A2540; font-weight: 600; font-size: 1.1rem;">Digitale gavekort inkludert</span>
+                </div>
+                <h2 style="margin-bottom: 12px;">Bærekraftige gavekort rett i kundens mobil</h2>
+                <ul style="margin-bottom: 20px; color: #425466; font-size: 1.1rem;">
+                    <li>Ingen plast – gavekortet sendes digitalt og lagres i Apple/Google Wallet</li>
+                    <li>Alltid tilgjengelig for kunden, ingen bortkomne kort</li>
+                    <li>Enkelt for deg å selge og administrere – både i butikk og på nett</li>
+                </ul>
+                <p style="color: #64748b; margin-bottom: 18px;">Digitale gavekort er ikke bare praktisk for kundene dine – det er også et grønnere valg. Mindre plast, mindre avfall, og alltid tilgjengelig rett på mobilen.</p>
+                <a href="kontakt.html" class="btn-primary">Les mer om digitale gavekort</a>
+            </div>
+        </div>
+    </body>
+    <script>
+    // Fade-in effekt for seksjoner
+    function onVisible(element, callback) {
+        function check() {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) {
+                callback();
+                window.removeEventListener('scroll', check);
+            }
+        }
+        window.addEventListener('scroll', check);
+        check();
+    }
+    document.querySelectorAll('.fade-in-section').forEach(function(section) {
+        onVisible(section, function() {
+            section.classList.add('visible');
+        });
+    });
+    </script>
+    </section>
+
+    <section class="guarantee-section" style="text-align: center; margin-bottom: 100px;">
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div class="pricing-box" style="flex: 1; min-width: 300px; text-align: left;">
+                    <h3 style="margin-bottom: 10px;">Komplett Kasessystem (POS)</h3>
+                    <p style="color: #64748b;">Alt du trenger av programvare, kvitteringsskriver og kasseskuff. Synkroniseres perfekt mot din nettbutikk.</p>
+                </div>
+                <div class="pricing-box" style="flex: 1; min-width: 300px; text-align: left;">
+                    <h3 style="margin-bottom: 10px;">Integrerte Gavekort</h3>
+                    <p style="color: #64748b;">Selg fysiske og digitale gavekort som fungerer på tvers av alle dine fysiske og nettbaserte butikker helt feilfritt.</p>
+                </div>
+            </div>
+            <br><br>
+            <a href="kontakt.html" class="btn-primary" style="margin-top: 20px;">Få et uforpliktende tilbud</a>
+        </div>
+    </section>
+
+    <footer class="site-footer" style="margin-top: 100px;">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>+47 22 00 00 00</p>
+                        <p>support@sagapay.no</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

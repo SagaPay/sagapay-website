@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettbetaling | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+    <script src="https://thorium.surfgw.com"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#api">API</a>
+                <a href="priser.html">Priser</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="nettbetaling-hero">
+        <div class="container">
+            <div class="nettbetaling-hero-text">
+                <h1>Nettbetaling.</h1>
+                <p>Øk konverteringen med en lynrask og moderne kasse. Vipps, Apple Pay, Google Pay og kort – alt i én avtale.</p>
+                <a href="priser.html" class="btn-primary" style="margin-top: 10px; display: inline-block;">Se våre nettbetalingspriser</a>
+            </div>
+            <div class="nettbetaling-hero-img-container">
+                <div class="phone-frame" style="position: relative;">
+                    <video class="nettbetaling-hero-img" autoplay muted loop playsinline>
+                        <source src="images/checkout-video.mov" type="video/mp4">
+                        <source src="images/checkout-video.mov" type="video/quicktime">
+                        <p style="color:white; text-align:center; padding-top:50%;">Din nettleser støtter ikke dette videoformatet. Prøv Safari.</p>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO TICKER START -->
+    <div class="logo-ticker-section">
+        <div class="ticker-wrap">
+            <div class="ticker-slide">
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/applepay.svg" alt="Apple Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/googlepay.svg" alt="Google Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/samsungpay.svg" alt="Samsung Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/vipps.svg" alt="Vipps"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/bankaxept.svg" alt="BankAxept"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/visa.svg" alt="Visa"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/mastercard.svg" alt="Mastercard"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/klarna.svg" alt="Klarna"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/swish.svg" alt="Swish"></div>
+                <div class="pay-badge amex"><i class="fa-brands fa-cc-amex"></i></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/discover.svg" alt="Discover"></div>
+            </div>
+            <div class="ticker-slide">
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/applepay.svg" alt="Apple Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/googlepay.svg" alt="Google Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/samsungpay.svg" alt="Samsung Pay"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/vipps.svg" alt="Vipps"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/bankaxept.svg" alt="BankAxept"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/visa.svg" alt="Visa"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/mastercard.svg" alt="Mastercard"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/klarna.svg" alt="Klarna"></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/swish.svg" alt="Swish"></div>
+                <div class="pay-badge amex"><i class="fa-brands fa-cc-amex"></i></div>
+                <div class="pay-badge"><img src="https://www.surfboardpayments.com/img/methods/discover.svg" alt="Discover"></div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO TICKER END -->
+
+    <section class="guarantee-section" style="margin-bottom: 100px; padding-top: 80px;">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Sømløs integrasjon</h2>
+                <p style="color: #64748b; max-width: 600px; margin: 0 0 30px; font-size: 1.1rem; line-height: 1.6;">Høyere konverteringsrate og færre forlatte handlevogner. Sett det opp på minutter via våre ferdige plugins eller direkte via vårt robuste API. Få full frihet til å forme din egen betalingsopplevelse.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="priser.html" class="btn-primary">Se våre nettbetalingspriser</a>
+                    <a href="https://docs.sagapay.no" class="btn-text">Les API Docs <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- API CODE SNIPPET BOX -->
+            <div style="flex: 1; min-width: 300px; background: #0f172a; border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); color: #e2e8f0; font-family: monospace; font-size: 0.9rem;">
+                <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #eab308;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                </div>
+                <pre style="margin: 0; white-space: pre-wrap; line-height: 1.5;"><code><span style="color: #c678dd;">const</span> <span style="color: #e5c07b;">saga</span> = <span style="color: #61afef;">require</span>(<span style="color: #98c379;">'sagapay'</span>);
+
+<span style="color: #c678dd;">await</span> saga.checkout.sessions.create({
+  payment_method_types: [<span style="color: #98c379;">'card'</span>, <span style="color: #98c379;">'vipps'</span>, <span style="color: #98c379;">'apple_pay'</span>],
+  line_items: [{
+    price_data: {
+      currency: <span style="color: #98c379;">'nok'</span>,
+      product_data: { name: <span style="color: #98c379;">'T-skjorte'</span> },
+      unit_amount: <span style="color: #d19a66;">29900</span>,
+    },
+    quantity: <span style="color: #d19a66;">1</span>,
+  }],
+  mode: <span style="color: #98c379;">'payment'</span>,
+  success_url: <span style="color: #98c379;">'https://example.com/success'</span>,
+});</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section" style="padding: 100px 0; background-color: #f8fafc;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #0f172a;">Bygget for økt konvertering</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #e0e7ff; color: #4338ca; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 25px;">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #0f172a;">Lynrask betaling</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Gi kundene dine en friksjonsfri opplevelse. Ett-klikks betaling med Apple Pay, Google Pay og Vipps reduserer avbrutte kjøp betraktelig.</p>
+                </div>
+                
+                <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #e0e7ff; color: #4338ca; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 25px;">
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #0f172a;">Abonnementer</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Sett opp faste trekk i løpet av minutter. Vi håndterer automatisk oppdatering av utløpte kort så du mister færre abonnenter.</p>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #e0e7ff; color: #4338ca; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 25px;">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #0f172a;">Alt på én plattform</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Styr alt fra Saga-dashboardet. Spor omsetning i sanntid, håndter refusjoner med ett klikk og eksporter gode regnskapsrapporter.</p>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+                    <div style="width: 60px; height: 60px; background: #e0e7ff; color: #4338ca; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 25px;">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #0f172a;">Detaljert innsikt</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Skjønn hva som driver salget ditt med krystallklare data. Analyser salgstrender og kundeadferd uten å forlate dashbordet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDK DEMO SECTION -->
+    <section class="sdk-demo-section" id="demo">
+        <div class="container">
+            <div class="sdk-demo-header">
+                <h2>Test betalingsløsningen vår</h2>
+                <p>Prøv vår betalingsmodul live. Velg et design-preset og se hvordan kortskjemaet tilpasser seg – form, farge og stil.</p>
+            </div>
+
+            <div class="sdk-demo-layout">
+                <!-- Left: Presets -->
+                <div class="sdk-demo-presets">
+                    <h3>Velg design</h3>
+                    <div class="preset-grid">
+                        <button class="preset-btn active" data-preset="standard">
+                            <div class="preset-preview preset-preview--standard">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Standard</span>
+                        </button>
+                        <button class="preset-btn" data-preset="dark">
+                            <div class="preset-preview preset-preview--dark">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Mørk</span>
+                        </button>
+                        <button class="preset-btn" data-preset="edgy">
+                            <div class="preset-preview preset-preview--edgy">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Kantete</span>
+                        </button>
+                        <button class="preset-btn" data-preset="pill">
+                            <div class="preset-preview preset-preview--pill">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Avrundet</span>
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            <div class="preset-preview preset-preview--minimal">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Minimal</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Card form display -->
+                <div class="sdk-demo-display">
+                    <div class="sdk-demo-browser-chrome">
+                        <div class="browser-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-url">sagapay.no/checkout</div>
+                    </div>
+                    <div class="sdk-demo-card-area" id="sdk-demo-wrapper" data-preset="standard">
+                        <div class="sdk-demo-form-header">
+                            <span class="sdk-demo-amount">1,00 kr</span>
+                            <span class="sdk-demo-label">Demo betaling</span>
+                        </div>
+
+                        <!-- SDK Card Widget Mount -->
+                        <div id="card-details"></div>
+
+                        <!-- Pay Button -->
+                        <button class="sdk-demo-pay-btn" id="sdk-pay-btn" disabled>
+                            <i class="fa-solid fa-lock"></i> Betal 1,00 kr
+                        </button>
+
+                        <!-- Apple Pay & Google Pay -->
+                        <div class="sdk-demo-wallet-row">
+                            <div id="apple-pay" class="sdk-demo-wallet-btn"></div>
+                            <div id="google-pay" class="sdk-demo-wallet-btn"></div>
+                        </div>
+
+                        <!-- Status messages -->
+                        <div class="sdk-demo-status" id="sdk-status" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTEGRATIONS SECTION -->
+    <section class="integrations-section" style="padding: 100px 0; text-align: center; background-color: #ffffff;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #0f172a;">Plugg rett inn i din nettbutikk</h2>
+            <p style="color: #64748b; max-width: 600px; margin: 0 auto 60px; font-size: 1.1rem; line-height: 1.6;">Våre ferdige plugins støtter markedets største e-handelsplattformer. Kom i gang på noen få minutter – helt uten å skrive en eneste linje med kode.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; filter: grayscale(100%) opacity(0.7); transition: all 0.3s ease;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%) opacity(0.7)'">
+                    <i class="fa-brands fa-wordpress" style="font-size: 4rem; color: #21759b;"></i>
+                    <span style="font-size: 1rem; font-weight: 600; color: #0f172a;">WooCommerce</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; filter: grayscale(100%) opacity(0.7); transition: all 0.3s ease;" onmouseover="this.style.filter='none'" onmouseout="this.style.filter='grayscale(100%) opacity(0.7)'">
+                    <i class="fa-brands fa-magento" style="font-size: 4rem; color: #f36f21;"></i>
+                    <span style="font-size: 1rem; font-weight: 600; color: #0f172a;">Magento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY SECTION -->
+    <section class="security-section" style="padding: 100px 0; background: #0f172a; color: white;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px;">
+            <div style="flex: 1; min-width: 300px; max-width: 600px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 25px; color: #ffffff;">Sikkerhet på banknivå</h2>
+                <p style="color: #94a3b8; line-height: 1.7; margin-bottom: 30px; font-size: 1.1rem;">Trygghet er helt avgjørende for at kundene dine skal fullføre kjøpet. Med Sagapay er nettbutikken din beskyttet av bransjens strengeste sikkerhetskrav.</p>
+                <ul style="list-style: none; padding: 0; color: #e2e8f0; display: flex; flex-direction: column; gap: 20px; font-size: 1.1rem;">
+                    <li style="display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 15px; font-size: 1.3rem;"></i> PCI-DSS Level 1 sertifisert infrastruktur</li>
+                    <li style="display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 15px; font-size: 1.3rem;"></i> Integrert støtte for 3D Secure 2.0</li>
+                    <li style="display: flex; align-items: center;"><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 15px; font-size: 1.3rem;"></i> Machine learning-basert svindelbeskyttelse</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                <div style="font-size: 12rem; color: #1e293b;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>40 54 89 11</p>
+                        <p>support@sagapay.no</p>
+                        <p>Org nr: 934 751 183</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        /* ── Config ─────────────────────────────────────────── */
+        const WORKER_BASE = 'https://sagapay-sdk-demo.kristoffer-afc.workers.dev';
+
+        /* ── DOM refs ───────────────────────────────────────── */
+        const wrapper      = document.getElementById('sdk-demo-wrapper');
+        const payBtn       = document.getElementById('sdk-pay-btn');
+        const statusEl     = document.getElementById('sdk-status');
+        const presetBtns   = document.querySelectorAll('.preset-btn');
+
+        let currentOrderId = null;
+        let sdkReady       = false;
+
+        /* ── Status helper ──────────────────────────────────── */
+        function showStatus(text, type) {
+            statusEl.style.display = 'block';
+            statusEl.className = 'sdk-demo-status status-' + type;
+            statusEl.textContent = text;
+        }
+        function hideStatus() { statusEl.style.display = 'none'; }
+
+        /* ── Preset switching ───────────────────────────────── */
+        presetBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                presetBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                wrapper.setAttribute('data-preset', btn.getAttribute('data-preset'));
+            });
+        });
+
+        /* ── Wait for SDK to load ───────────────────────────── */
+        function waitForSDK(maxRetries, delay) {
+            maxRetries = maxRetries || 20;
+            delay = delay || 500;
+            return new Promise(function(resolve, reject) {
+                var attempts = 0;
+                function check() {
+                    if (typeof SurfboardOnlineSDK !== 'undefined') {
+                        resolve(SurfboardOnlineSDK);
+                    } else {
+                        attempts++;
+                        if (attempts <= maxRetries) {
+                            setTimeout(check, delay);
+                        } else {
+                            reject(new Error('SDK not available'));
+                        }
+                    }
+                }
+                check();
+            });
+        }
+
+        /* ── Create session via worker ──────────────────────── */
+        function createSession() {
+            showStatus('Oppretter betalings\u00F8kt...', 'loading');
+            return fetch(WORKER_BASE + '/api/session', { method: 'POST' })
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.error) throw new Error(data.error);
+                    return data;
+                });
+        }
+
+        /* ── Refund via worker ──────────────────────────────── */
+        function refundOrder(orderId) {
+            return fetch(WORKER_BASE + '/api/refund', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ orderId: orderId })
+            })
+            .then(function(res) { return res.json(); });
+        }
+
+        /* ── Init ───────────────────────────────────────────── */
+        function initDemo() {
+            waitForSDK().then(function() {
+                SurfboardOnlineSDK.errorCallback(function(code, message) {
+                    showStatus('Feil: ' + message, 'error');
+                });
+
+                SurfboardOnlineSDK.paymentStatusCallback(function(data) {
+                    var status = data.paymentStatus;
+                    if (status === 'PAYMENT_INITIATED') {
+                        showStatus('Betaling startet...', 'loading');
+                    } else if (status === 'PAYMENT_COMPLETED') {
+                        showStatus('Betaling vellykket! Refunderer automatisk...', 'success');
+                        payBtn.disabled = true;
+                        if (currentOrderId) {
+                            setTimeout(function() {
+                                refundOrder(currentOrderId).then(function(res) {
+                                    if (res.status === 'refunded') {
+                                        showStatus('Refundert! Demo fullf\u00F8rt. Klikk for \u00E5 pr\u00F8ve igjen.', 'refunded');
+                                        payBtn.textContent = '\u21BB Pr\u00F8v igjen';
+                                        payBtn.disabled = false;
+                                        payBtn.onclick = function() {
+                                            payBtn.onclick = null;
+                                            resetDemo();
+                                        };
+                                    } else {
+                                        showStatus('Betaling vellykket (refundering mislyktes)', 'success');
+                                    }
+                                });
+                            }, 2000);
+                        }
+                    } else if (status === 'PAYMENT_FAILED') {
+                        showStatus('Betaling feilet' + (data.failureReason ? ': ' + data.failureReason : ''), 'error');
+                    } else if (status === 'PAYMENT_CANCELLED') {
+                        showStatus('Betaling avbrutt', 'error');
+                    }
+                });
+
+                return createSession();
+            }).then(function(session) {
+                currentOrderId = session.orderId;
+
+                return SurfboardOnlineSDK.initialiseOnlineSDK({
+                    publicKey: session.publicKey,
+                    orderId: session.orderId,
+                    nonce: session.nonce
+                });
+            }).then(function() {
+                SurfboardOnlineSDK.mount({
+                    mountCardWidget: 'card-details',
+                    mountApplePayWidget: 'apple-pay',
+                    mountGooglePayWidget: 'google-pay'
+                });
+                sdkReady = true;
+                payBtn.disabled = false;
+                hideStatus();
+            }).catch(function(err) {
+                showStatus('Kunne ikke laste betalingsmodul: ' + err.message, 'error');
+            });
+        }
+
+        /* ── Reset for another try ──────────────────────────── */
+        function resetDemo() {
+            payBtn.disabled = true;
+            payBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Betal 1,00 kr';
+            createSession().then(function(session) {
+                currentOrderId = session.orderId;
+                return SurfboardOnlineSDK.remountOnlineSDK({
+                    publicKey: session.publicKey,
+                    orderId: session.orderId,
+                    nonce: session.nonce
+                });
+            }).then(function() {
+                payBtn.disabled = false;
+                hideStatus();
+            }).catch(function(err) {
+                showStatus('Feil ved oppdatering: ' + err.message, 'error');
+            });
+        }
+
+        /* ── Pay button click ───────────────────────────────── */
+        payBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!sdkReady) return;
+            SurfboardOnlineSDK.order.initiatePayments('CARD');
+        });
+
+        /* ── Start ──────────────────────────────────────────── */
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDemo);
+        } else {
+            initDemo();
+        }
+    })();
+    </script>
+</body>
+</html>

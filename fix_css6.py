@@ -1,0 +1,61 @@
+import re
+
+with open("styles.css", "r", encoding="utf-8") as f:
+    css = f.read()
+
+split_str = "/* Specific size boosts for text-heavy merchant logos */"
+if split_str in css:
+    css = css.split(split_str)[0]
+
+new_css = """/* Specific size boosts for text-heavy merchant logos */
+.merchant-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px; /* Tilbake til normal avstand */
+    margin: 0 20px; /* Balansert mellomrom */
+}
+
+/* For å unngå at tomrommet i bildene dytter bort de andre logoene, 
+   bruker vi en standardhøyde og zoomer dem inn med "scale" i stedet. */
+.merchant-logo img[src*="merchant-2"],
+.merchant-logo img[src*="merchant-3"],
+.merchant-logo img[src*="merchant-4"],
+.merchant-logo img[src*="merchant-5"] {
+    width: auto !important;
+    height: 70px !important; 
+    max-height: none !important;
+    max-width: none !important;
+    object-fit: contain !important;
+}
+
+/* Lashly - Zoomer inn forbi det blanke rommet */
+.merchant-logo img[src*="merchant-2"] {
+    transform: scale(2.0) !important; 
+}
+
+/* Home & Interior - Ekstrem zoom for å fylle skjermen uten å dytte andre unna */
+.merchant-logo img[src*="merchant-3"] {
+    transform: scale(3.5) !important; 
+}
+
+/* Reisespill - Din base-størrelse, justert rolig zoom */
+.merchant-logo img[src*="merchant-4"] {
+    transform: scale(1.1) !important; 
+}
+
+/* Delikate Matgaver - Din base-størrelse */
+.merchant-logo img[src*="merchant-5"] {
+    transform: scale(1.0) !important; 
+}
+
+
+/* Hover effects (skalerer pent opp fra sitt respektive zoomnivå) */
+.merchant-logo img[src*="merchant-2"]:hover { transform: scale(2.1) !important; }
+.merchant-logo img[src*="merchant-3"]:hover { transform: scale(3.6) !important; }
+.merchant-logo img[src*="merchant-4"]:hover { transform: scale(1.2) !important; }
+.merchant-logo img[src*="merchant-5"]:hover { transform: scale(1.1) !important; }
+"""
+
+with open("styles.css", "w", encoding="utf-8") as f:
+    f.write(css + new_css)

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Oss | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#api">API</a>
+                <a href="priser.html">Priser</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+        <section class="nettbetaling-hero" style="background: linear-gradient(135deg, rgba(82,113,255,0.05) 0%, rgba(200,80,192,0.05) 100%);">
+        <div class="container" style="display: flex; gap: 40px; align-items: center; min-height: 50vh;">
+            <div class="nettbetaling-hero-text" style="flex: 1;">
+                <h1>Om Sagapay.</h1>
+                <p>Norskutviklet betalingsinfrastruktur for det moderne markedet. Vi tror på å fjerne unødvendige mellomledd for å gi bedrifter lavere kostnader, høyere konvertering og smidigere hverdager.</p>
+                <div style="margin-top: 25px; display: flex; gap: 15px;">
+                    <a href="kontakt.html" class="btn-primary">Snakk med salg</a>
+                    <a href="priser.html" class="btn-outline">Se våre priser</a>
+                </div>
+            </div>
+            <div class="nettbetaling-hero-img-container" style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative;">
+                <style>
+                    @keyframes floatCard {
+                        0% { transform: translateY(0px) rotateY(-15deg) rotateX(10deg); }
+                        50% { transform: translateY(-20px) rotateY(-10deg) rotateX(15deg); }
+                        100% { transform: translateY(0px) rotateY(-15deg) rotateX(10deg); }
+                    }
+                    @keyframes glowPulse {
+                        0% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+                        50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+                        100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+                    }
+                </style>
+                <!-- Glowing orb behind -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 250px; height: 250px; background: #0044FF; filter: blur(80px); z-index: 0; animation: glowPulse 4s infinite;"></div>
+                
+                <!-- Floating Glass Card -->
+                <div style="position: relative; z-index: 1; width: 100%; max-width: 380px; height: 240px; background: linear-gradient(135deg, rgba(0,68,255,0.8) 0%, rgba(10,37,64,0.95) 100%); border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.4); backdrop-filter: blur(12px); padding: 30px; display: flex; flex-direction: column; justify-content: space-between; animation: floatCard 6s ease-in-out infinite;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <i class="fa-solid fa-microchip" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+                        <i class="fa-brands fa-nfc-symbol" style="font-size: 2rem; color: rgba(255,255,255,0.6);"></i>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Courier New', monospace; font-size: 1.4rem; color: white; letter-spacing: 3px; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">**** **** **** 2026</div>
+                        <div style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 500;">
+                            <span>SAGAPAY AS</span>
+                            <span>12/28</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kjerneverdier -->
+    <section class="features bg-light" style="padding-top: 80px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Dette tror vi på</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">Verdiene som driver oss til å bygge bedre løsninger for norsk næringsliv hver eneste dag.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Verdi 1 -->
+                <div class="bento-card">
+                    <div class="bento-img-container bento-bg-1" style="display: flex; align-items: center; justify-content: center; height: 160px; background: linear-gradient(135deg, #0A2540 0%, #0044FF 100%);">
+                        <i class="fa-solid fa-shield-halved" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Sikkerhet i DNA-et</h3>
+                        <p>Betalinger krever total tillit. Plattformen vår er bygget fra grunnen av med de strengeste bransjekravene innen databeskyttelse og oppetid.</p>
+                    </div>
+                </div>
+
+                <!-- Verdi 2 -->
+                <div class="bento-card">
+                    <div class="bento-img-container bento-bg-2" style="display: flex; align-items: center; justify-content: center; height: 160px; background: linear-gradient(135deg, #0A2540 0%, #0044FF 100%);">
+                        <i class="fa-solid fa-lightbulb" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Innovasjon som fjerner friksjon</h3>
+                        <p>Teknologi skal fungere i bakgrunnen. Vi fjerner klikk, nedetid og unødvendig kompleksitet slik at du kan fokusere på driften.</p>
+                    </div>
+                </div>
+
+                <!-- Verdi 3 -->
+                <div class="bento-card">
+                    <div class="bento-img-container bento-bg-3" style="display: flex; align-items: center; justify-content: center; height: 160px; background: linear-gradient(135deg, #0A2540 0%, #0044FF 100%);">
+                        <i class="fa-solid fa-handshake-angle" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Nærhet til kundene</h3>
+                        <p>Når det brenner, trenger du svar nå. Vårt norske supportteam kjenner det lokale markedet og er alltid klare til å bistå ved behov.</p>
+                    </div>
+                </div>
+                
+                <!-- Verdi 4 -->
+                <div class="bento-card">
+                    <div class="bento-img-container bento-bg-4" style="display: flex; align-items: center; justify-content: center; height: 160px; background: linear-gradient(135deg, #0A2540 0%, #0044FF 100%);">
+                        <i class="fa-solid fa-chart-line" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Skalerbar vekst</h3>
+                        <p>Små eller store volumer spiller ingen rolle. Vår infrastruktur vokser i takt med at du får flere kunder – både på nett og i butikk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCHANT LOGO TICKER -->
+    <style>
+        .clean-merchant-slide {
+            gap: 120px !important;
+            padding-right: 120px !important;
+            align-items: center;
+        }
+        .clean-merchant-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+        }
+        .clean-merchant-logo img {
+            max-height: 45px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) opacity(45%) !important;
+            mix-blend-mode: normal !important;
+            transition: all 0.3s ease;
+        }
+        .clean-merchant-logo:hover img {
+            filter: brightness(0) opacity(80%) !important;
+            transform: scale(1.05);
+        }
+    </style>
+    <section class="merchant-section" style="padding: 30px 0; background-color: #f8fafc; overflow: hidden; border-bottom: 1px solid #e2e8f0; margin-top: 40px; margin-bottom: 20px;">
+        <div class="container" style="text-align: center; margin-bottom: 15px;">
+            <p style="font-weight: 600; color: #64748b; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">Bedrifter som stoler på vår infrastruktur</p>
+        </div>
+        <div class="ticker-wrap" style="padding: 10px 0;">
+            <div class="ticker-slide clean-merchant-slide">
+                <div class="clean-merchant-logo"><img src="images/logo-home-interior-new.png" alt="Home and interior" style="max-height: 140px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-lashly-new.png" alt="Lashly" style="max-height: 85px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-diamanter-new.png" alt="Diamanter" style="max-height: 55px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-sinorack-new.png" alt="Sinorack"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-delikate-matgaver.png" alt="Delikate matgaver" style="max-height: 90px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-reisespill-new.png" alt="Reisespill" style="max-height: 140px;"></div>
+            </div>
+            <!-- Duplicate for seamless looping -->
+            <div class="ticker-slide clean-merchant-slide">
+                <div class="clean-merchant-logo"><img src="images/logo-home-interior-new.png" alt="Home and interior" style="max-height: 140px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-lashly-new.png" alt="Lashly" style="max-height: 85px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-diamanter-new.png" alt="Diamanter" style="max-height: 55px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-sinorack-new.png" alt="Sinorack"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-delikate-matgaver.png" alt="Delikate matgaver" style="max-height: 90px;"></div>
+                <div class="clean-merchant-logo"><img src="images/logo-reisespill-new.png" alt="Reisespill" style="max-height: 140px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>40 54 89 11</p>
+                        <p>support@sagapay.no</p>
+                        <p>Org nr: 934 751 183</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

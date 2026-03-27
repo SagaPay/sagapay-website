@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Pay | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#api">API</a>
+                <a href="priser.html">Priser</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pricing-hero" style="background-color: #f8fafc; color: #0f172a; text-align: left; padding: 120px 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            <div style="flex: 1; min-width: 300px;">
+                <div style="display: inline-block; background-color: #e0e7ff; color: #4338ca; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 20px;"><i class="fa-solid fa-mobile-screen"></i> Nyhet</div>
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px; color: #0f172a;">Selg hvor som helst. Alt du trenger er telefonen din.</h1>
+                <p style="color: #64748b; font-size: 1.25rem; line-height: 1.6; margin-bottom: 40px; max-width: 500px;">Gjør iPhone eller Android-telefonen din om til en betalingsterminal. Ingen ekstra maskinvare kreves. Godta trygge kortbetalinger, Apple Pay og Google Pay overalt.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://onboarding.sagapay.no/" class="btn-primary" style="padding: 15px 30px; font-size: 1.1rem;">Last ned appen</a>
+                    <a href="priser.html" class="btn-text" style="padding: 15px 10px; font-size: 1.1rem;">Se priser</a>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; position: relative;">
+                <!-- Decorative background blob -->
+                <div style="position: absolute; width: 400px; height: 400px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border-radius: 50%; z-index: 0; filter: blur(40px); opacity: 0.6; top: 10%; right: 10%;"></div>
+                
+                <!-- Phone Image Mockup replaced with Video -->
+                <img src="images/tap-to-pay.png" alt="Tap to pay on phone" style="max-width: 100%; width: 350px; position: relative; z-index: 1; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); border-radius: 40px;">
+            </div>
+        </div>
+    </header>
+
+    <!-- NEW VIDEO SHOWCASE SECTION -->
+    <section class="video-showcase" style="padding: 100px 0; background-color: #0f172a; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 20px;">En sømløs betalingsopplevelse</h2>
+            <p style="color: #94a3b8; font-size: 1.1rem; max-width: 600px; margin: 0 auto 50px auto;">Se hvor raskt og enkelt det er å ta betalt med Saga Tap to Pay.</p>
+            
+            <div style="max-width: 900px; margin: 0 auto; position: relative; padding: 20px; background: #1e293b; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid #334155;">
+                <video src="images/tap-to-pay-hero.mp4" autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 16px; object-fit: cover; display: block;"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" style="padding: 100px 0; background-color: #ffffff;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 20px;">Slik fungerer det</h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Det har aldri vært enklere å ta betalt. Kom i gang på under 5 minutter.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; text-align: center;">
+                <div style="padding: 30px;">
+                    <div style="width: 80px; height: 80px; background-color: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #4338ca; margin: 0 auto 25px; font-weight: 700;">1</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0f172a;">Slå inn beløpet</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Åpne Sagapay-appen på din telefon og tast inn beløpet kunden skal betale.</p>
+                </div>
+                
+                <div style="padding: 30px;">
+                    <div style="width: 80px; height: 80px; background-color: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #4338ca; margin: 0 auto 25px; font-weight: 700;">2</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0f172a;">Kunden tæpper</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Be kunden tæppe kortet sitt, eller mobilen sin, direkte mot baksiden av din telefon.</p>
+                </div>
+
+                <div style="padding: 30px;">
+                    <div style="width: 80px; height: 80px; background-color: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #4338ca; margin: 0 auto 25px; font-weight: 700;">3</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #0f172a;">Betaling godkjent</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Et pip bekrefter at betalingen er gjennomført, og du ser pengene på vei til din konto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFECT FOR SECTION -->
+    <section class="perfect-for" style="padding: 100px 0; background-color: #f8fafc;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 25px;">Hvem passer det for?</h2>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 25px;">
+                    <li style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-mug-hot" style="font-size: 1.5rem; color: #4338ca; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 5px;">Pop-up og kafeer</h4>
+                            <p style="color: #64748b; line-height: 1.5;">Ta betalt i køen, på markedet eller ute ved bordene. Ingen klumpete maskiner.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-hammer" style="font-size: 1.5rem; color: #4338ca; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 5px;">Håndverkere</h4>
+                            <p style="color: #64748b; line-height: 1.5;">Få betalt umiddelbart når jobben er gjort, direkte hos kunden.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 15px;">
+                        <i class="fa-solid fa-store" style="font-size: 1.5rem; color: #4338ca; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 5px;">Små butikker</h4>
+                            <p style="color: #64748b; line-height: 1.5;">Kutt kostnadene for terminal-leie og ta betalt med utstyret du allerede eier.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <div style="background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; width: 100%; max-width: 400px;">
+                    <i class="fa-solid fa-shield-halved" style="font-size: 4rem; color: #10b981; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 15px;">Like trygt som en vanlig terminal</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 0;">Tap to Pay krypterer alle transaksjoner og lagrer aldri kortinformasjon på telefonen din. Støttet av Visa, Mastercard, Apple og Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OLD GARANTEE SECTION REMOVED, FOOTER STARTS HERE -->
+
+    <footer class="site-footer" style="margin-top: 100px;">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>40 54 89 11</p>
+                        <p>support@sagapay.no</p>
+                        <p>Org nr: 934 751 183</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

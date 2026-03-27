@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Sagapay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html"><img src="images/saga_logo.png" alt="Sagapay Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Hjem</a>
+                <a href="index.html#products">Produkter</a>
+                <a href="index.html#features">Funksjoner</a>
+                <a href="index.html#api">API</a>
+                <a href="priser.html">Priser</a>
+            </div>
+            <div class="nav-cta">
+                <a href="kontakt.html" class="btn-text">Snakk med salg</a>
+                <a href="https://onboarding.sagapay.no/" class="btn-primary">Kom i gang <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pricing-hero">
+        <div class="container">
+            <h1>Ofte stilte spørsmål (FAQ)</h1>
+            <p>Finn raske svar på de vanligste spørsmålene knyttet til våre produkter og tjenester.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding: 80px 0; background-color: #f8fafc;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 2rem; color: #0f172a; margin-bottom: 40px; text-align: center;">Generelle spørsmål</h2>
+            
+            <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- FAQ 2 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hvilke parter er involvert i en betaling?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Det er fire parter involvert: 1) Kunden som betaler. 2) Din bedrift (salgsstedet). 3) Innløser (som henter pengene). 4) Kortutsteder (banken til kunden). Saga fungerer som et mellomledd som samler trådene mellom alle disse slik at alt skjer på et millisekund.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hva betyr IC++ (Interchange++)?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        IC++ er den mest transparente prismodellen for kortbetalinger. Cost pluss et lite påslag. Du betaler den reelle kostnaden fra kortnettverket (f.eks. Visa) pluss et fast, lavt påslag fra oss. På denne måten slipper du skjulte avgifter.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hva koster det per måned?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Ingenting! Hos Sagapay betaler du ingen faste månedsavgifter. Du betaler kun en lav prosentandel per vellykkede transaksjon. Selger du ingenting en måned, betaler du ingenting.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hvor billig kan dere faktisk være?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Fordi vi har bygget infrastrukturen vår fra bunnen av med moderne teknologi, har vi kuttet ut fordyrende mellomledd. Disse besparelsene gir vi videre til deg som kunde. Har dere høyt volum? Ta kontakt for et skreddersydd tilbud!
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hvor har dere Plugins?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Vi har ferdige gratis plugins for markedets største plattformer: WooCommerce og Magento. For skreddersydde løsninger har vi et utviklervennlig REST API.
+                    </div>
+                </details>
+
+                <!-- FAQ 7 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Tar dere både fysiske og nettbetalinger?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Ja! Vi leverer omnikanal-løsninger som betyr at du kan ha nettbutikken og den fysiske butikken din (POS/Terminal/Tap to Pay) i ett og samme system med felles rapportering.
+                    </div>
+                </details>
+
+                <!-- FAQ 8 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Tar dere subscriptions (faste trekk)?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Absolutt. Vår løsning for nettbetaling støtter faste trekk, automatisk fornyelse og håndtering av utløpte kort, perfekt for SaaS, abonnementer eller donasjoner.
+                    </div>
+                </details>
+
+                <!-- FAQ 9 -->
+                <details style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;">
+                    <summary style="font-size: 1.25rem; font-weight: 600; color: #0f172a; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Hvor raskt kan man komme i gang?
+                        <i class="fa-solid fa-chevron-down" style="color: #4338ca; transition: transform 0.3s ease;"></i>
+                    </summary>
+                    <div style="margin-top: 15px; color: #64748b; line-height: 1.6; padding-top: 15px; border-top: 1px solid #e2e8f0;">
+                        Selve registreringen tar under 5 minutter. Så snart bedriften din er godkjent (ofte samme dag), kan du ta imot din første betaling umiddelbart.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS TIMELINE SECTION -->
+    <section style="padding: 100px 0; background-color: #0f172a; color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: white;">Hvordan en betaling beveger seg</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <!-- Step 1 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #4338ca; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">1</div>
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 2rem; color: #818cf8; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Initiering</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Kunden betaler i terminalen eller checkouten via Saga.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #4338ca; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">2</div>
+                    <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: #818cf8; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Ruting</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Transaksjonen blir kryptert og sendt trygt til innløser.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #4338ca; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">3</div>
+                    <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: #818cf8; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Validering</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Kortnettverket sjekker risiko, svindel og validerer kjøpet.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #4338ca; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">4</div>
+                    <i class="fa-solid fa-building-columns" style="font-size: 2rem; color: #818cf8; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Banken bestemmer</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Kundens bank godkjenner dekningsgrad eller avslår.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #4338ca; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">5</div>
+                    <i class="fa-solid fa-check-double" style="font-size: 2rem; color: #818cf8; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Godkjenning</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Svaret blir mottatt på brøkdelen av et sekund og salget bekreftes.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div style="background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; position: relative;">
+                    <div style="width: 40px; height: 40px; background: #10b981; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; position: absolute; top: -15px; left: -15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">6</div>
+                    <i class="fa-solid fa-money-bill-transfer" style="font-size: 2rem; color: #10b981; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff;">Utbetaling</h3>
+                    <p style="color: #94a3b8; line-height: 1.5; font-size: 0.95rem;">Transaksjonen er i boks, og pengene flyttes til din bedriftskonto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/saga_logo.png" alt="Sagapay Logo" style="max-height: 48px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p>Moderne betalingsløsninger<br>for norske bedrifter.</p>
+                    <div class="footer-contact">
+                        <p>40 54 89 11</p>
+                        <p>support@sagapay.no</p>
+                        <p>Org nr: 934 751 183</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PRODUKTER</h3>
+                    <ul>
+                        <li><a href="nettbetaling.html">Nettbetaling</a></li>
+                        <li><a href="pos.html">POS-system</a></li>
+                        <li><a href="tap-to-pay.html">Tap to Pay</a></li>
+                        <li><a href="pos.html">Gavekort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>SELSKAP</h3>
+                    <ul>
+                        <li><a href="om-oss.html">Om Sagapay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>HJELP</h3>
+                    <ul>
+                        <li><a href="kontakt.html">Kundestøtte</a></li>
+                        <li><a href="https://docs.sagapay.no">Dokumentasjon</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <img src="images/saga_logo.png" alt="Sagapay Logo" style="height: 20px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span>&copy; 2026 Sagapay AS. All rights reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Personvern</a>
+                    <a href="#">Vilkår</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

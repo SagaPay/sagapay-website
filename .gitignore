@@ -1,2 +1,9 @@
 
 .builder/config/data.json
+.vscode/mcp.json
+worker/
+caddy-data/
+caddy-config/
+Caddyfile
+node_modules/
+.wrangler/
