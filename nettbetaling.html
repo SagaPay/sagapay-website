@@ -390,6 +390,12 @@
                 currentLocale = btn.getAttribute('data-locale');
                 if (sdkReady && typeof SurfboardOnlineSDK !== 'undefined') {
                     SurfboardOnlineSDK.changeLocale(currentLocale);
+                    /* Re-mount wallet buttons after locale change */
+                    SurfboardOnlineSDK.mount({
+                        mountCardWidget: 'card-details',
+                        mountApplePayWidget: 'apple-pay',
+                        mountGooglePayWidget: 'google-pay'
+                    });
                 }
             });
         });
