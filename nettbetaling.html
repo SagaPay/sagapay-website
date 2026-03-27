@@ -490,6 +490,20 @@
                 if (currentLocale !== 'no') {
                     SurfboardOnlineSDK.changeLocale(currentLocale);
                 }
+
+                /* Pre-fill all customer info so Card works without user input */
+                return SurfboardOnlineSDK.order.addCustomerInformation({
+                    name: 'Ola Nordmann',
+                    email: 'example@sagapay.no',
+                    phone: { countryCode: '+47', number: '40548911' },
+                    billingAddress: {
+                        addressLine1: 'Karl Johans gate 1',
+                        city: 'Oslo',
+                        postalCode: '0154',
+                        countryCode: 'NO'
+                    }
+                });
+            }).then(function() {
                 SurfboardOnlineSDK.mount({
                     mountCardWidget: 'card-details',
                     mountApplePayWidget: 'apple-pay',
