@@ -402,6 +402,11 @@
 
         /* ── Init ───────────────────────────────────────────── */
         function initDemo() {
+            if (location.protocol !== 'https:') {
+                showStatus('Demo krever HTTPS. Omdirigerer...', 'loading');
+                location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+                return;
+            }
             waitForSDK().then(function() {
                 SurfboardOnlineSDK.errorCallback(function(code, message) {
                     showStatus('Feil: ' + message, 'error');
