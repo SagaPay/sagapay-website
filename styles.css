@@ -2079,6 +2079,44 @@ margin-left: 60px !important;
     flex-direction: column;
     gap: 12px;
 }
+
+/* Locale selector */
+.locale-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.locale-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--font-stack);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #334155;
+}
+.locale-btn:hover {
+    border-color: #3f50ba;
+    background: #f8faff;
+}
+.locale-btn.active {
+    border-color: #3f50ba;
+    background: #eef2ff;
+    color: #3f50ba;
+    font-weight: 600;
+    box-shadow: 0 0 0 3px rgba(63, 80, 186, 0.12);
+}
+.locale-flag {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
 .preset-btn {
     display: flex;
     align-items: center;

@@ -200,6 +200,26 @@
                             <span>Minimal</span>
                         </button>
                     </div>
+
+                    <h3 style="margin-top: 24px;">Velg språk</h3>
+                    <div class="locale-grid">
+                        <button class="locale-btn active" data-locale="no" title="Norsk">
+                            <span class="locale-flag">🇳🇴</span>
+                            <span>Norsk</span>
+                        </button>
+                        <button class="locale-btn" data-locale="en" title="English">
+                            <span class="locale-flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="locale-btn" data-locale="sv" title="Svenska">
+                            <span class="locale-flag">🇸🇪</span>
+                            <span>Svenska</span>
+                        </button>
+                        <button class="locale-btn" data-locale="da" title="Dansk">
+                            <span class="locale-flag">🇩🇰</span>
+                            <span>Dansk</span>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Right: Card form display -->
@@ -336,9 +356,11 @@
         const payBtn       = document.getElementById('sdk-pay-btn');
         const statusEl     = document.getElementById('sdk-status');
         const presetBtns   = document.querySelectorAll('.preset-btn');
+        const localeBtns   = document.querySelectorAll('.locale-btn');
 
         let currentOrderId = null;
         let sdkReady       = false;
+        let currentLocale  = 'no';
 
         /* ── Status helper ──────────────────────────────────── */
         function showStatus(text, type) {
@@ -354,6 +376,18 @@
                 presetBtns.forEach(function(b) { b.classList.remove('active'); });
                 btn.classList.add('active');
                 wrapper.setAttribute('data-preset', btn.getAttribute('data-preset'));
+            });
+        });
+
+        /* ── Locale switching ────────────────────────────────── */
+        localeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                localeBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                currentLocale = btn.getAttribute('data-locale');
+                if (sdkReady && typeof SurfboardOnlineSDK !== 'undefined') {
+                    SurfboardOnlineSDK.changeLocale(currentLocale);
+                }
             });
         });
 
@@ -453,6 +487,9 @@
                     nonce: session.nonce
                 });
             }).then(function() {
+                if (currentLocale !== 'no') {
+                    SurfboardOnlineSDK.changeLocale(currentLocale);
+                }
                 SurfboardOnlineSDK.mount({
                     mountCardWidget: 'card-details',
                     mountApplePayWidget: 'apple-pay',
