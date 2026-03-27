@@ -487,9 +487,7 @@
                     nonce: session.nonce
                 });
             }).then(function() {
-                if (currentLocale !== 'no') {
-                    SurfboardOnlineSDK.changeLocale(currentLocale);
-                }
+                SurfboardOnlineSDK.changeLocale(currentLocale);
 
                 /* Pre-fill all customer info so Card works without user input */
                 return SurfboardOnlineSDK.order.addCustomerInformation({
