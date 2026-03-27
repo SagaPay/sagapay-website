@@ -2274,6 +2274,14 @@ margin-left: 60px !important;
     flex: 1;
     min-height: 44px;
 }
+/* Force Google Pay button/iframe to fill its container */
+#google-pay iframe,
+#google-pay button,
+#google-pay .gpay-button,
+#google-pay > div {
+    width: 100% !important;
+    min-height: 44px !important;
+}
 
 /* Status message */
 .sdk-demo-status {
