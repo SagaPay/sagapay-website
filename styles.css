@@ -2,7 +2,7 @@
 .dashboard-hero-gradient {
     background: linear-gradient(120deg, #f6f9fc 60%, #e0e7ff 100%);
     position: relative;
-    padding: 100px 40px 60px 40px;
+    padding: 100px 80px 60px 80px !important;
     overflow: hidden;
     display: flex;
     align-items: center;
