@@ -2,13 +2,16 @@
 .dashboard-hero-gradient {
     background: linear-gradient(120deg, #f6f9fc 60%, #e0e7ff 100%);
     position: relative;
-    padding: 100px 0 60px 0;
+    padding: 100px 40px 60px 40px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     min-height: 480px;
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 40px;
 }
 .dashboard-hero-title {
     font-size: 3.2rem;
