@@ -2515,6 +2515,8 @@ margin-left: 60px !important;
 .partner-hero-content h1 {
     font-size: 3.5rem;
     color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
     margin-bottom: 20px;
     font-weight: 800;
     line-height: 1.15;
