@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+    <script src="https://thorium.surfgw.com"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -342,6 +344,111 @@
         </div>
     </section>
 
+    <!-- SDK DEMO SECTION -->
+    <section class="sdk-demo-section" id="demo">
+        <div class="container">
+            <div class="sdk-demo-header">
+                <span class="sdk-demo-badge">Online SDK</span>
+                <h2>Prøv betalingsløsningen vår – live</h2>
+                <p>Se selv hvordan det fungerer. Velg design, språk og gjennomfør en ekte testbetaling på 1 kr som refunderes automatisk.</p>
+            </div>
+
+            <div class="sdk-demo-layout">
+                <!-- Left: Presets -->
+                <div class="sdk-demo-presets">
+                    <h3>Velg design</h3>
+                    <div class="preset-grid">
+                        <button class="preset-btn active" data-preset="standard">
+                            <div class="preset-preview preset-preview--standard">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Standard</span>
+                        </button>
+                        <button class="preset-btn" data-preset="dark">
+                            <div class="preset-preview preset-preview--dark">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Mørk</span>
+                        </button>
+                        <button class="preset-btn" data-preset="edgy">
+                            <div class="preset-preview preset-preview--edgy">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Kantete</span>
+                        </button>
+                        <button class="preset-btn" data-preset="pill">
+                            <div class="preset-preview preset-preview--pill">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Avrundet</span>
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            <div class="preset-preview preset-preview--minimal">
+                                <div class="preset-swatch"></div>
+                            </div>
+                            <span>Minimal</span>
+                        </button>
+                    </div>
+
+                    <h3 style="margin-top: 24px;">Velg språk</h3>
+                    <div class="locale-grid">
+                        <button class="locale-btn active" data-locale="no" title="Norsk">
+                            <span class="locale-flag">🇳🇴</span>
+                            <span>Norsk</span>
+                        </button>
+                        <button class="locale-btn" data-locale="en" title="English">
+                            <span class="locale-flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="locale-btn" data-locale="sv" title="Svenska">
+                            <span class="locale-flag">🇸🇪</span>
+                            <span>Svenska</span>
+                        </button>
+                        <button class="locale-btn" data-locale="da" title="Dansk">
+                            <span class="locale-flag">🇩🇰</span>
+                            <span>Dansk</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Card form display -->
+                <div class="sdk-demo-display">
+                    <div class="sdk-demo-browser-chrome">
+                        <div class="browser-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-url">sagapay.no/checkout</div>
+                    </div>
+                    <div class="sdk-demo-card-area" id="sdk-demo-wrapper" data-preset="standard">
+                        <div class="sdk-demo-form-header">
+                            <span class="sdk-demo-amount">1,00 kr</span>
+                            <span class="sdk-demo-label">Demo betaling</span>
+                        </div>
+
+                        <!-- SDK Card Widget Mount -->
+                        <div id="card-details"></div>
+
+                        <!-- Pay Button -->
+                        <button class="sdk-demo-pay-btn" id="sdk-pay-btn" disabled>
+                            <i class="fa-solid fa-lock"></i> Betal 1,00 kr
+                        </button>
+
+                        <!-- Apple Pay & Google Pay -->
+                        <div class="sdk-demo-wallet-row">
+                            <div id="apple-pay" class="sdk-demo-wallet-btn"></div>
+                            <div id="google-pay" class="sdk-demo-wallet-btn"></div>
+                        </div>
+
+                        <!-- Status messages -->
+                        <div class="sdk-demo-status" id="sdk-status" style="display:none;"></div>
+
+                        <p class="sdk-demo-disclaimer"><i class="fa-solid fa-circle-info"></i> Dette er ekte betalinger på 1,00 kr. Alle betalinger refunderes automatisk umiddelbart etter gjennomført transaksjon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- BRANSJER / TABS SEKSJON -->
     <section class="industries-section" id="bransjer">
         <div class="industries-container">
@@ -634,5 +741,195 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+    (function() {
+        var WORKER_BASE = 'https://sagapay-sdk-demo.kristoffer-afc.workers.dev';
+
+        var wrapper      = document.getElementById('sdk-demo-wrapper');
+        var payBtn       = document.getElementById('sdk-pay-btn');
+        var statusEl     = document.getElementById('sdk-status');
+        var presetBtns   = document.querySelectorAll('.preset-btn');
+        var localeBtns   = document.querySelectorAll('.locale-btn');
+
+        var currentOrderId = null;
+        var sdkReady       = false;
+        var currentLocale  = 'no';
+
+        function showStatus(text, type) {
+            statusEl.style.display = 'block';
+            statusEl.className = 'sdk-demo-status status-' + type;
+            statusEl.textContent = text;
+        }
+        function hideStatus() { statusEl.style.display = 'none'; }
+
+        presetBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                presetBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                wrapper.setAttribute('data-preset', btn.getAttribute('data-preset'));
+            });
+        });
+
+        localeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                localeBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                currentLocale = btn.getAttribute('data-locale');
+                if (sdkReady && typeof SurfboardOnlineSDK !== 'undefined') {
+                    SurfboardOnlineSDK.changeLocale(currentLocale);
+                    SurfboardOnlineSDK.mount({
+                        mountCardWidget: 'card-details',
+                        mountApplePayWidget: 'apple-pay',
+                        mountGooglePayWidget: 'google-pay'
+                    });
+                }
+            });
+        });
+
+        function waitForSDK(maxRetries, delay) {
+            maxRetries = maxRetries || 20;
+            delay = delay || 500;
+            return new Promise(function(resolve, reject) {
+                var attempts = 0;
+                function check() {
+                    if (typeof SurfboardOnlineSDK !== 'undefined') {
+                        resolve(SurfboardOnlineSDK);
+                    } else {
+                        attempts++;
+                        if (attempts <= maxRetries) {
+                            setTimeout(check, delay);
+                        } else {
+                            reject(new Error('SDK not available'));
+                        }
+                    }
+                }
+                check();
+            });
+        }
+
+        function createSession() {
+            showStatus('Oppretter betalings\u00F8kt...', 'loading');
+            return fetch(WORKER_BASE + '/api/session', { method: 'POST' })
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.error) throw new Error(data.error);
+                    return data;
+                });
+        }
+
+        function refundOrder(orderId) {
+            return fetch(WORKER_BASE + '/api/refund', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ orderId: orderId })
+            })
+            .then(function(res) { return res.json(); });
+        }
+
+        function initDemo() {
+            waitForSDK().then(function() {
+                SurfboardOnlineSDK.errorCallback(function(code, message) {
+                    showStatus('Feil: ' + message, 'error');
+                });
+
+                SurfboardOnlineSDK.paymentStatusCallback(function(data) {
+                    var status = data.paymentStatus;
+                    if (status === 'PAYMENT_INITIATED') {
+                        showStatus('Betaling startet...', 'loading');
+                    } else if (status === 'PAYMENT_COMPLETED') {
+                        showStatus('Betaling vellykket! Refunderer automatisk...', 'success');
+                        payBtn.disabled = true;
+                        if (currentOrderId) {
+                            setTimeout(function() {
+                                refundOrder(currentOrderId).then(function(res) {
+                                    if (res.status === 'refunded') {
+                                        showStatus('Refundert! Demo fullf\u00F8rt. Klikk for \u00E5 pr\u00F8ve igjen.', 'refunded');
+                                        payBtn.textContent = '\u21BB Pr\u00F8v igjen';
+                                        payBtn.disabled = false;
+                                        payBtn.onclick = function() {
+                                            payBtn.onclick = null;
+                                            resetDemo();
+                                        };
+                                    } else {
+                                        showStatus('Betaling vellykket (refundering mislyktes)', 'success');
+                                    }
+                                });
+                            }, 2000);
+                        }
+                    } else if (status === 'PAYMENT_FAILED') {
+                        showStatus('Betaling feilet' + (data.failureReason ? ': ' + data.failureReason : ''), 'error');
+                    } else if (status === 'PAYMENT_CANCELLED') {
+                        showStatus('Betaling avbrutt', 'error');
+                    }
+                });
+
+                return createSession();
+            }).then(function(session) {
+                currentOrderId = session.orderId;
+
+                return SurfboardOnlineSDK.initialiseOnlineSDK({
+                    publicKey: session.publicKey,
+                    orderId: session.orderId,
+                    nonce: session.nonce
+                });
+            }).then(function() {
+                SurfboardOnlineSDK.changeLocale(currentLocale);
+
+                return SurfboardOnlineSDK.order.addCustomerInformation({
+                    name: 'Ola Nordmann',
+                    email: 'example@sagapay.no',
+                    phone: { countryCode: '+47', number: '40548911' },
+                    billingAddress: {
+                        addressLine1: 'Karl Johans gate 1',
+                        city: 'Oslo',
+                        postalCode: '0154',
+                        countryCode: 'NO'
+                    }
+                });
+            }).then(function() {
+                SurfboardOnlineSDK.mount({
+                    mountCardWidget: 'card-details',
+                    mountApplePayWidget: 'apple-pay',
+                    mountGooglePayWidget: 'google-pay'
+                });
+                sdkReady = true;
+                payBtn.disabled = false;
+                hideStatus();
+            }).catch(function(err) {
+                showStatus('Kunne ikke laste betalingsmodul: ' + err.message, 'error');
+            });
+        }
+
+        function resetDemo() {
+            payBtn.disabled = true;
+            payBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Betal 1,00 kr';
+            createSession().then(function(session) {
+                currentOrderId = session.orderId;
+                return SurfboardOnlineSDK.remountOnlineSDK({
+                    publicKey: session.publicKey,
+                    orderId: session.orderId,
+                    nonce: session.nonce
+                });
+            }).then(function() {
+                payBtn.disabled = false;
+                hideStatus();
+            }).catch(function(err) {
+                showStatus('Feil ved oppdatering: ' + err.message, 'error');
+            });
+        }
+
+        payBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!sdkReady) return;
+            SurfboardOnlineSDK.order.initiatePayments('CARD');
+        });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDemo);
+        } else {
+            initDemo();
+        }
+    })();
+    </script>
 </body>
 </html>
